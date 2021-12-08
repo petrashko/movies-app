@@ -19,8 +19,8 @@ class Main extends React.Component {
     searchMovies = (str='matrix', type='all') => {
         this.setState({loading: true});
 
-        //fetch(`http://www.omdbapi.com/?apikey=33d37bd4&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
-        fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
+        //fetch(`https://www.omdbapi.com/?apikey=33d37bd4&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
+        fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
             .then(response => {
                 return response.json();
             })
